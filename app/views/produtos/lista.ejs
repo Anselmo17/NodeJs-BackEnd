@@ -1,0 +1,43 @@
+
+<html>
+   <style>
+      h1, table{
+            text-align: center;
+          font-family: 'Times New Roman', Times, serif; 
+          margin-left: auto;
+          margin-right: auto; 
+        }
+
+        thead{
+            background: black;
+            color: aliceblue;
+            font-size: 1.5em;
+            border-radius: 5px;
+        }
+
+   </style> 
+    <body>
+
+        <h1>Tabela de Livros</h1>
+        <table >
+            <tr>
+                <thead>
+                    <td>Id</td>
+                    <td>Nome</td>
+                    <td>Preço</td>
+                    <td>Descrição</td>
+                 </thead>   
+            </tr>
+            <tr>
+                <% for(var i=0; i<lista.length; i++) {%>
+                    <tr>
+                        <td><%= lista[i].id %></td>
+                        <td><%= lista[i].titulo %></td>
+                        <td><%= lista[i].preco %></td>
+                        <td><%= lista[i].descricao%></td>
+                    </tr>
+                <% } %>
+            </tr>
+        </table>
+    </body>
+</html>
